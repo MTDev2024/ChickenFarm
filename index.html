@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferme Avicole Naturelle - Œufs Bio & Production Durable</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    
+
+</head>
+<body class="bg-amber-50">
+    <!-- Navigation -->
+    <nav class="bg-green-800 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold font-serif">Ferme Naturelle</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-amber-200 transition">Notre Ferme</a>
+                <a href="#products" class="hover:text-amber-200 transition">Nos Œufs</a>
+                <a href="#gallery" class="hover:text-amber-200 transition">Galerie</a>
+                <a href="#partners" class="hover:text-amber-200 transition">Partenaires</a>
+                <a href="#order" class="hover:text-amber-200 transition">Commander</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero min-h-screen flex items-center justify-center text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Œufs Frais de Notre Ferme Durable</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Production locale et responsable en Occitanie, avec une énergie 100% renouvelable et un engagement écologique.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#order" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-semibold text-lg transition">Commander Maintenant</a>
+                <a href="#about" class="bg-green-800 hover:bg-green-900 text-white px-8 py-3 rounded-lg font-semibold text-lg transition">Découvrir Notre Ferme</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Notre Engagement Écologique</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1604874020896-4b3b0a5d0a5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Ferme écologique" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <div class="flex items-center mb-6">
+                        <div class="p-3 rounded-full bg-green-100 text-green-800 mr-4">
+                            <i class="fas fa-leaf text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-green-800">Agriculture Biologique</h3>
+                    </div>
+                    <p class="text-gray-700 mb-6">Nos poules sont élevées en plein air avec une alimentation 100% biologique, sans OGM ni antibiotiques. Nous privilégions le bien-être animal et la qualité nutritionnelle de nos œufs.</p>
+                    
+                    <div class="flex items-center mb-6">
+                        <div class="p-3 rounded-full bg-green-100 text-green-800 mr-4">
+                            <i class="fas fa-solar-panel text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-green-800">Énergie Renouvelable</h3>
+                    </div>
+                    <p class="text-gray-700 mb-6">Notre ferme fonctionne exclusivement avec des énergies propres : panneaux solaires et éoliennes nous permettent de réduire notre empreinte carbone à son minimum.</p>
+                    
+                    <div class="flex items-center">
+                        <div class="p-3 rounded-full bg-green-100 text-green-800 mr-4">
+                            <i class="fas fa-recycle text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-green-800">Circuit Court</h3>
+                    </div>
+                    <p class="text-gray-700">Nous vendons directement aux consommateurs et aux commerces locaux pour limiter les transports et soutenir l'économie régionale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-amber-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Nos Produits</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1587486913049-53fc88980cfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Œufs bio" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-green-800 text-white px-3 py-1 rounded-full text-sm font-semibold">BIO</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-green-800 mb-2">Œufs Bio Plein Air</h3>
+                        <p class="text-gray-600 mb-4">Lot de 6 œufs frais de poules élevées en plein air avec alimentation biologique.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">3,50€</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg transition">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1587486913049-53fc88980cfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Œufs bio" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-green-800 text-white px-3 py-1 rounded-full text-sm font-semibold">BIO</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-green-800 mb-2">Œufs Bio Plein Air - Lot Familial</h3>
+                        <p class="text-gray-600 mb-4">Lot de 12 œufs frais, parfaits pour les familles. Emballage écologique.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">6,50€</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg transition">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1587486913049-53fc88980cfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Œufs bio" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-green-800 text-white px-3 py-1 rounded-full text-sm font-semibold">BIO</div>
+                        <div class="absolute top-4 left-4 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-semibold">NOUVEAU</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-green-800 mb-2">Œufs Bleus Araucana</h3>
+                        <p class="text-gray-600 mb-4">Œufs bleu-vert de nos poules Araucana, une race rare et patrimoniale.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">5,00€</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg transition">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Notre Ferme en Images</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80" alt="Poules en plein air" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1581337204873-ef36aa186caa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Poules dans l'herbe" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1459262838948-15834313b0f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Panneaux solaires" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1508514177221-188e1df820e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Éolienne" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1589310243389-96a5483213a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Poules heureuses" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Œufs frais" class="w-full h-64 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="py-20 bg-green-800 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Partenaires Institutionnels</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-white p-6 rounded-full mb-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Logo_minist%C3%A8re_Agriculture_et_Souverainet%C3%A9_alimentaire.svg/1200px-Logo_minist%C3%A8re_Agriculture_et_Souverainet%C3%A9_alimentaire.svg.png" alt="Ministère de l'Agriculture" class="h-20">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Ministère de l'Agriculture</h3>
+                    <p class="text-green-200">Reconnue ferme exemplaire dans le cadre du plan de développement de l'agriculture biologique.</p>
+                </div>
+                
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-white p-6 rounded-full mb-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Logo_Ministere_Ecologie_Transition_ecologique_2020.svg/1200px-Logo_Ministere_Ecologie_Transition_ecologique_2020.svg.png" alt="Ministère de la Transition Écologique" class="h-20">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Ministère de la Transition Écologique</h3>
+                    <p class="text-green-200">Labellisée "Ferme à Énergie Positive" pour notre engagement dans les énergies renouvelables.</p>
+                </div>
+                
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-white p-6 rounded-full mb-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Logo_R%C3%A9gion_Occitanie_2017.svg/1200px-Logo_R%C3%A9gion_Occitanie_2017.svg.png" alt="Région Occitanie" class="h-20">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Région Occitanie</h3>
+                    <p class="text-green-200">Bénéficiaire du programme "Alimentation Durable" pour notre approche en circuit court.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-amber-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Témoignages de Nos Clients</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-500 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Les œufs de cette ferme sont exceptionnels ! Le goût est incomparable et je suis ravie de soutenir une production locale et écologique."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-green-800">Marie D.</h4>
+                            <p class="text-gray-600 text-sm">Toulouse</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-500 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"En tant que restaurateur, je recherche toujours des produits de qualité. Ces œufs bio sont parfaits pour mes plats et mes clients adorent !"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-green-800">Pierre L.</h4>
+                            <p class="text-gray-600 text-sm">Restaurateur à Montpellier</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-500 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"J'apprécie particulièrement l'engagement écologique de cette ferme. Les œufs sont délicieux et je sais que je fais un choix responsable."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-green-800">Sophie R.</h4>
+                            <p class="text-gray-600 text-sm">Narbonne</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Commandez en Ligne</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-amber-50 rounded-lg shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold text-green-800 mb-6">Votre Commande</h3>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-semibold mb-2">Sélectionnez vos produits</label>
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center bg-white p-4 rounded-lg shadow">
+                                    <div>
+                                        <h4 class="font-bold">Œufs Bio Plein Air (6)</h4>
+                                        <p class="text-sm text-gray-600">3,50€</p>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <button class="bg-gray-200 px-3 py-1 rounded-l">-</button>
+                                        <span class="bg-white px-4 py-1">0</span>
+                                        <button class="bg-gray-200 px-3 py-1 rounded-r">+</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex justify-between items-center bg-white p-4 rounded-lg shadow">
+                                    <div>
+                                        <h4 class="font-bold">Œufs Bio Plein Air (12)</h4>
+                                        <p class="text-sm text-gray-600">6,50€</p>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <button class="bg-gray-200 px-3 py-1 rounded-l">-</button>
+                                        <span class="bg-white px-4 py-1">0</span>
+                                        <button class="bg-gray-200 px-3 py-1 rounded-r">+</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex justify-between items-center bg-white p-4 rounded-lg shadow">
+                                    <div>
+                                        <h4 class="font-bold">Œufs Bleus Araucana (6)</h4>
+                                        <p class="text-sm text-gray-600">5,00€</p>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <button class="bg-gray-200 px-3 py-1 rounded-l">-</button>
+                                        <span class="bg-white px-4 py-1">0</span>
+                                        <button class="bg-gray-200 px-3 py-1 rounded-r">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg shadow mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Sous-total</span>
+                                <span>0,00€</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-semibold">Livraison</span>
+                                <span>À calculer</span>
+                            </div>
+                            <div class="border-t my-2"></div>
+                            <div class="flex justify-between font-bold text-lg">
+                                <span>Total</span>
+                                <span>0,00€</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 bg-green-800 text-white p-8">
+                        <h3 class="text-2xl font-bold mb-6">Informations de Livraison</h3>
+                        
+                        <form>
+                            <div class="mb-4">
+                                <label class="block mb-2">Nom complet</label>
+                                <input type="text" class="w-full px-4 py-2 rounded text-gray-800">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-2 rounded text-gray-800">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block mb-2">Téléphone</label>
+                                <input type="tel" class="w-full px-4 py-2 rounded text-gray-800">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block mb-2">Adresse</label>
+                                <textarea class="w-full px-4 py-2 rounded text-gray-800"></textarea>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block mb-2">Méthode de Paiement</label>
+                                <div class="flex space-x-4">
+                                    <button type="button" class="stripe-button px-4 py-2 rounded-lg flex items-center">
+                                        <i class="fab fa-cc-stripe text-2xl mr-2"></i> Stripe
+                                    </button>
+                                    <button type="button" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center transition">
+                                        <i class="fab fa-cc-paypal text-2xl mr-2"></i> PayPal
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-4 rounded-lg transition">
+                                Confirmer la Commande
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-green-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">Abonnez-vous à Notre Newsletter</h2>
+            <p class="max-w-2xl mx-auto mb-8 text-green-200">Recevez nos actualités, promotions et conseils sur l'alimentation durable directement dans votre boîte mail.</p>
+            
+            <form class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Votre email" class="flex-grow px-4 py-3 rounded-l-lg focus:outline-none text-gray-800">
+                <button type="submit" class="bg-amber-600 hover:bg-amber-700 px-6 py-3 rounded-r-lg font-semibold transition">S'abonner</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Ferme Naturelle</h3>
+                    <p class="text-green-300">Production d'œufs bio en Occitanie avec une approche écologique et durable.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-green-300 hover:text-white transition">Notre Ferme</a></li>
+                        <li><a href="#products" class="text-green-300 hover:text-white transition">Nos Produits</a></li>
+                        <li><a href="#gallery" class="text-green-300 hover:text-white transition">Galerie</a></li>
+                        <li><a href="#order" class="text-green-300 hover:text-white transition">Commander</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-green-300"></i>
+                            <span class="text-green-300">123 Route des Fermes, 31000 Toulouse</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-green-300"></i>
+                            <span class="text-green-300">05 61 23 45 67</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-green-300"></i>
+                            <span class="text-green-300">contact@fermenaturelle.fr</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Réseaux Sociaux</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-green-800 hover:bg-green-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-green-800 hover:bg-green-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-green-800 hover:bg-green-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-6 flex items-center">
+                        <div class="bg-white p-2 rounded mr-3">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/AB_logo_2018.svg/1200px-AB_logo_2018.svg.png" alt="Bio" class="h-8">
+                        </div>
+                        <div class="bg-white p-2 rounded">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Logo_Agriculture_Biologique_Europe_2010.svg/1200px-Logo_Agriculture_Biologique_Europe_2010.svg.png" alt="Bio Europe" class="h-8">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-green-800 mt-12 pt-8 text-center text-green-400">
+                <p>&copy; 2023 Ferme Naturelle. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
